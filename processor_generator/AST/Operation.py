@@ -18,8 +18,8 @@ class Operations(Enum):
 
 class Operation(ASTNode):
     def __init__(self, operation: Operations):
-        super().__init__('Operation')
+        super().__init__("Operation")
         self.operation: Operations = operation
 
     def output(self) -> Signals:
-        raise NotImplementedError('')
+        raise NotImplementedError("")
