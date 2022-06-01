@@ -11,4 +11,4 @@ class ASTNode(ABC):
 
     @abstractmethod
     def output(self) -> Signals:
-        ...
+        ...  # pragma: no cover
