@@ -4,5 +4,5 @@ import unittest
 
 class TestOperation(unittest.TestCase):
     def test_constructor(self):
-        op = Operation(Operations.OR)
-        self.assertEqual(op.operation, Operations.OR)
+        op = Operation(NumericOperator.OR)
+        self.assertEqual(op.operation, NumericOperator.OR)

@@ -2,7 +2,7 @@ from .ASTNode import ASTNode, Signals
 from enum import Enum
 
 
-class Operations(Enum):
+class NumericOperator(Enum):
     ADD = "+"
     SUBTRACT = "-"
     MULTIPLY = "*"
@@ -17,9 +17,9 @@ class Operations(Enum):
 
 
 class Operation(ASTNode):
-    def __init__(self, operation: Operations):
+    def __init__(self, operation: NumericOperator):
         super().__init__("Operation")
-        self.operation: Operations = operation
+        self.operation: NumericOperator = operation
 
     def output(self) -> Signals:
         raise NotImplementedError("")
