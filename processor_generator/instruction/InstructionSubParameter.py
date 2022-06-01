@@ -13,7 +13,7 @@ class InstructionSubParameter(ABC):
 
     @abstractmethod
     def _value(self, using: int) -> int:
-        raise NotImplementedError  # pragma: no cover
+        raise NotImplementedError
 
     def value(self, using: int) -> int:
         return self._value(using) << self.shift_by

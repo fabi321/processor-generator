@@ -83,10 +83,6 @@ class InstructionParameterTest(unittest.TestCase):
             sub_parameter_parser('1-2', 0),
         ])
 
-    def test_repr(self):
-        param = get_param()
-        self.assertEqual(repr(param), f'InstructionParameter(name={NAME!r}, source={SOURCE!r}, description={DESCRIPTION!r})')
-
     def test_eq(self):
         param1 = InstructionParameter(NAME, SOURCE, DESCRIPTION)
         param2 = InstructionParameter.from_obj({

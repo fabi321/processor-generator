@@ -56,10 +56,6 @@ class TestVariableInstructionSubParameter(unittest.TestCase):
         param2 = StaticInstructionSubParameter(0, 1, 1)
         self.assertNotEqual(param1, param2)
 
-    def test_repr(self):
-        param = VariableInstructionSubParameter(0, 1, 2)
-        self.assertEqual(repr(param), 'VariableInstructionSubParameter(shift_by=0, start=1, end=2)')
-
     def test_len(self):
         param = VariableInstructionSubParameter(0, 0, 0)
         self.assertEqual(param.length, 1)

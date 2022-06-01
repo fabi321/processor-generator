@@ -81,10 +81,6 @@ class TestInstruction(unittest.TestCase):
         ins2.parameters = PARAMETERS
         self.assertEqual(ins1, ins2)
 
-    def test_repr(self):
-        ins = Instruction(NAME, DESCRIPTION, PARAMETERS, ARCHITECTURE)
-        self.assertEqual(repr(ins), f'Instruction(name={NAME!r}, description={DESCRIPTION!r}, parameters={PARAMETERS!r}, architecture={ARCHITECTURE!r})')
-
     def test_parameters_for_instruction(self):
         ins = Instruction(NAME, DESCRIPTION, PARAMETERS, ARCHITECTURE)
         to_test: int = 0b0100_1101
