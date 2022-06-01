@@ -4,5 +4,8 @@ from .ASTNode import ASTNode
 
 
 class Network:
-    def __init__(self):
+    def __init__(self) -> None:
         self.depends_on: List[ReferenceType[ASTNode]] = []
+
+    def depend_on(self, node: ASTNode) -> None:
+        self.depends_on.append(ref(node))
