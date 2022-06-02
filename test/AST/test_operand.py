@@ -1,5 +1,6 @@
-from processor_generator.AST.Operand import *
 import unittest
+
+from processor_generator.AST.Operand import *
 
 
 class TestSignalOperand(unittest.TestCase):
@@ -28,6 +29,19 @@ class TestSignalOperand(unittest.TestCase):
         net.update_value(Signal.SIGNAL_B, 10)
         net.tick()
         self.assertEqual(op.value(), 0)
+
+    def test_eq(self):
+        net = Network()
+        op1 = SignalOperand(net, Signal.SIGNAL_A)
+        op2 = SignalOperand(net, Signal.SIGNAL_B)
+        self.assertNotEqual(op1, op2)
+        net2 = Network()
+        op1.network = net2
+        op2.signal = Signal.SIGNAL_A
+        self.assertNotEqual(op1, op2)
+        self.assertNotEqual(op1, net)
+        op1.network = net
+        self.assertEqual(op1, op2)
 
 
 class TestConstantOperand(unittest.TestCase):

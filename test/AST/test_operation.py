@@ -1,5 +1,6 @@
-from processor_generator.AST.Operation import *
 import unittest
+
+from processor_generator.AST.Operation import *
 
 
 class TestOperation(unittest.TestCase):

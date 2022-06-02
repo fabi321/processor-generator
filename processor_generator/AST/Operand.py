@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import Any
 from weakref import ref, ReferenceType
 
 from .Network import Network
@@ -20,6 +21,14 @@ class SignalOperand(Operand):
         if network := self.network():
             return network.get_signal_value(self.signal)
         raise RuntimeError("Network belonging to signal has been destroyed")
+
+    def __eq__(self, other: Any) -> bool:
+        if isinstance(other, SignalOperand):
+            return self.network == other.network and self.signal == other.signal
+        return False
+
+    def __repr__(self) -> str:
+        return f"SignalOperand(network={self.network!r}, signal={self.signal!r})"
 
 
 class ConstantOperand(Operand):
