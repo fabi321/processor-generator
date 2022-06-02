@@ -53,3 +53,12 @@ class TestConstantOperand(unittest.TestCase):
     def test_value(self):
         op = ConstantOperand(20)
         self.assertEqual(op.value(), 20)
+
+    def test_eq(self):
+        op1 = ConstantOperand(10)
+        op2 = ConstantOperand(20)
+        self.assertNotEqual(op1, op2)
+        op3 = SignalOperand(Network(), Signal.SIGNAL_A)
+        self.assertNotEqual(op1, op3)
+        op2.constant = 10
+        self.assertEqual(op1, op2)

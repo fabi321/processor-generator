@@ -46,3 +46,11 @@ class ConstantOperand(Operand):
 
     def value(self) -> int:
         return self.constant
+
+    def __eq__(self, other: Any) -> bool:
+        if isinstance(other, ConstantOperand):
+            return self.constant == other.constant
+        return False
+
+    def __repr__(self) -> str:
+        return f"ConstantOperand(constant={self.constant})"
