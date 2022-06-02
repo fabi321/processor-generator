@@ -13,7 +13,6 @@ class StoredInstructionParameter(_StoredInstructionParameter, total=False):
 class _StoredInstruction(TypedDict):
     parameters: List[StoredInstructionParameter]
     name: str
-    encoding: str
     architecture: str
 
 
