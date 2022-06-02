@@ -2,4 +2,5 @@
 .vscode/
 .venv/
 htmlcov/
+.mypy_cache/
 .coverage
