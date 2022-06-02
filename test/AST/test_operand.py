@@ -9,7 +9,8 @@ class TestSignalOperand(unittest.TestCase):
         sig = Signal.SIGNAL_A
         op = SignalOperand(net, sig)
         self.assertEqual(op.signal, sig)
-        self.assertIs(op.network(), net)
+        self.assertIs(op.network, net)
+        self.assertIsInstance(op._network, ReferenceType)
 
     def test_network_dropped(self):
         net = Network()
