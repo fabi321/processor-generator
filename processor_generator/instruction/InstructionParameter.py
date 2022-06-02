@@ -1,7 +1,9 @@
 from __future__ import annotations
+
 from typing import Optional, List, Any
-from .instruction_types import StoredInstructionParameter
+
 from .InstructionSubParameter import InstructionSubParameter, sub_parameter_parser
+from .instruction_types import StoredInstructionParameter
 
 
 class InstructionParameter:

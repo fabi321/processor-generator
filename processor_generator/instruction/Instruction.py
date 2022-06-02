@@ -1,7 +1,9 @@
 from __future__ import annotations
+
 from typing import Optional, List, Dict, Any
-from .instruction_types import StoredInstruction
+
 from .InstructionParameter import InstructionParameter
+from .instruction_types import StoredInstruction
 
 
 class Instruction:

@@ -1,5 +1,6 @@
-from .ASTNode import ASTNode, Signals
 from enum import Enum
+
+from .ASTNode import ASTNode, Signals
 
 
 class NumericOperator(Enum):

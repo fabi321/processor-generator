@@ -1,7 +1,8 @@
-from .Signal import Signal
-from .Network import Network
 from abc import ABC, abstractmethod
 from weakref import ref, ReferenceType
+
+from .Network import Network
+from .Signal import Signal
 
 
 class Operand(ABC):

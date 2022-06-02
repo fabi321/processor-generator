@@ -1,5 +1,7 @@
 from weakref import ref, ReferenceType
+
 from typing import List
+
 from .ASTNode import ASTNode, Signals
 from .Signal import Signal
 

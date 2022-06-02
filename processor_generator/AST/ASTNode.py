@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
+
 from typing import Dict
+
 from .Signal import Signal
 
 Signals = Dict[Signal, int]
