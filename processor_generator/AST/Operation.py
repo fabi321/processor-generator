@@ -1,5 +1,6 @@
 from enum import Enum
-from typing import Optional
+
+from typing import Optional, Any
 
 from .ASTNode import ASTNode, Signals
 from .Operand import Operand, ConstantOperand
@@ -33,3 +34,15 @@ class Operation(ASTNode):
 
     def output(self) -> Signals:
         raise NotImplementedError("")
+
+    def __eq__(self, other: Any) -> bool:
+        if isinstance(other, Operation):
+            return (
+                self.operation == other.operation
+                and self.right == other.right
+                and self.left == other.left
+            )
+        return False
+
+    def __repr__(self) -> str:
+        return f"Operation(operation={self.operation}, left={self.left}, right={self.right})"
