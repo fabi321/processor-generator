@@ -34,7 +34,7 @@ class VariableInstructionSubParameter(InstructionSubParameter):
     def mask(self) -> int:
         mask: int = 0
         for i in range(self.start, self.end + 1):
-            mask |= 2 ** i
+            mask |= 2**i
         return mask
 
     def _value(self, using: int) -> int:
