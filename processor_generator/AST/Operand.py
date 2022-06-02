@@ -18,7 +18,7 @@ class SignalOperand(Operand):
     def value(self) -> int:
         if network := self.network():
             return network.get_signal_value(self.signal)
-        raise RuntimeError('Network belonging to signal has been destroyed')
+        raise RuntimeError("Network belonging to signal has been destroyed")
 
 
 class ConstantOperand(Operand):
